@@ -11,6 +11,8 @@ library(dplyr)
 
 library(ggplot2)
 
+setwd("~/github/2022-04-07-ucsb-r-geospatial-personal")
+
 aoi_boundary_HARV <- st_read(
   "data/NEON-DS-Site-Layout-Files/HARV/HarClip_UTMZ18.shp")
 
@@ -199,9 +201,12 @@ class(lines_HARV$BicyclesHo)
 
 levels(lines_HARV$BicyclesHo)
 
+unique(lines_HARV$BicyclesHo)
+
 lines_removeNA <- lines_HARV[!is.na(lines_HARV$BicyclesHo),] 
 
 lines_showHarv <- lines_removeNA %>% filter(BicyclesHo == "Bicycles and Horses Allowed")
+
 ggplot() + 
   geom_sf(data = lines_HARV) + 
   geom_sf(data = lines_showHarv, aes(color = BicyclesHo), size = 2) + 
@@ -217,9 +222,6 @@ state_boundary_US <-
   st_read("data/NEON-DS-Site-Layout-Files/US-Boundary-Layers/US-State-Boundaries-Census-2014.shp")
 
 levels(state_boundary_US$region)
-
-state_boundary_US <- 
-  st_read("data/NEON-DS-Site-Layout-Files/US-Boundary-Layers/US-State-Boundaries-Census-2014.shp" )
 
 unique(state_boundary_US$region)
 

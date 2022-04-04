@@ -11,6 +11,8 @@ library(ggplot2)
 
 library(raster)
 
+setwd("~/github/2022-04-07-ucsb-r-geospatial-personal")
+
 aoi_boundary_HARV <- st_read(
   "data/NEON-DS-Site-Layout-Files/HARV/HarClip_UTMZ18.shp")
 
