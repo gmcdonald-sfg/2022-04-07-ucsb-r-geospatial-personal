@@ -9,6 +9,7 @@
 ########################################################
 
 library(sf)
+library(ggplot2)
 
 setwd("~/github/2022-04-07-ucsb-r-geospatial-personal")
 
@@ -58,15 +59,19 @@ class(lines_HARV)
 
 class(point_HARV)
 
+st_geometry_type(lines_HARV)
+
+st_geometry_type(point_HARV)
+
 # 2. What is the CRS and extent for each object?
 
 st_crs(lines_HARV)
 
-st_bbox(lines_HARV)
+st_crs(point_HARV)
 
 st_bbox(point_HARV)
 
-st_crs(point_HARV)
+st_bbox(lines_HARV)
 
 # 3. Do the files contain points, lines, or polygons?
 
