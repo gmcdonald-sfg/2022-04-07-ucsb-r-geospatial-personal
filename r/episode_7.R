@@ -58,8 +58,6 @@ names(point_HARV)
 
 lines_HARV$TYPE
 
-levels(lines_HARV$TYPE)
-
 unique(lines_HARV$TYPE)
 
 ########################################################
@@ -68,6 +66,8 @@ unique(lines_HARV$TYPE)
 
 footpath_HARV <- lines_HARV %>% 
   filter(TYPE == "footpath")
+
+footpath_HARV
 
 nrow(footpath_HARV)
 
@@ -81,6 +81,9 @@ ggplot() +
   labs(color = 'Footpath ID') +
   ggtitle("NEON Harvard Forest Field Site", subtitle = "Footpaths") + 
   coord_sf()
+
+########################################################
+#### SKIP THIS CHALLENGE
 
 ########################################################
 ## Challenge: Subset Spatial Line Objects Part 1
@@ -97,6 +100,9 @@ ggplot() +
   geom_sf(data = boardwalk_HARV, size = 1.5) +
   ggtitle("NEON Harvard Forest Field Site", subtitle = "Boardwalks") + 
   coord_sf()
+
+########################################################
+#### DO THIS CHALLENGE
 
 ########################################################
 ## Challenge: Subset Spatial Line Objects Part 2
@@ -119,8 +125,6 @@ ggplot() +
 ## Customize Plots
 ########################################################
 
-levels(lines_HARV$TYPE)
-
 unique(lines_HARV$TYPE)
 
 road_colors <- c("blue", "green", "navy", "purple")
@@ -131,6 +135,9 @@ ggplot() +
   labs(color = 'Road Type') +
   ggtitle("NEON Harvard Forest Field Site", subtitle = "Roads & Trails") + 
   coord_sf()
+
+########################################################
+#### SKIP THIS SECTION
 
 ########################################################
 ## Adjust Line Width
@@ -146,10 +153,12 @@ ggplot() +
   coord_sf()
 
 ########################################################
+#### SKIP THIS CHALLENGE
+
+########################################################
 ## Challenge: Plot Line Width by Attribute
 ########################################################
 
-levels(lines_HARV$TYPE)
 unique(lines_HARV$TYPE)
 
 line_width <- c(1, 3, 2, 6)
@@ -193,13 +202,15 @@ ggplot() +
   ggtitle("NEON Harvard Forest Field Site", 
           subtitle = "Roads & Trails - Pretty Colors") +
   coord_sf()
+
+########################################################
+#### SKIP THIS CHALLENGE
+
 ########################################################
 ## Challenge: Plot Lines by Attribute
 ########################################################
 
 class(lines_HARV$BicyclesHo)
-
-levels(lines_HARV$BicyclesHo)
 
 unique(lines_HARV$BicyclesHo)
 
@@ -215,13 +226,16 @@ ggplot() +
   coord_sf()
 
 ########################################################
+#### DO THIS CHALLENGE
+
+########################################################
 ## Challenge: Plot Polygon by Attribute
 ########################################################
 
 state_boundary_US <- 
   st_read("data/NEON-DS-Site-Layout-Files/US-Boundary-Layers/US-State-Boundaries-Census-2014.shp")
 
-levels(state_boundary_US$region)
+state_boundary_US
 
 unique(state_boundary_US$region)
 
