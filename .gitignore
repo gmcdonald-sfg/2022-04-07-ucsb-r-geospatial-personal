@@ -29,4 +29,5 @@ vignettes/*.pdf
 data/*
 .DS_Store
 InstallTest/*
+source_data/*
 2022-04-07-ucsb-r-geospatial-personal.Rproj
