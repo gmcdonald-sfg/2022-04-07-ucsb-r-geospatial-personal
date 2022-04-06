@@ -14,11 +14,11 @@ library(ggplot2)
 setwd("~/github/2022-04-07-ucsb-r-geospatial-personal")
 
 aoi_boundary_HARV <- st_read(
-  "source_data/NEON-DS-Site-Layout-Files/HARV/HarClip_UTMZ18.shp")
+  "data/NEON-DS-Site-Layout-Files/HARV/HarClip_UTMZ18.shp")
 
-lines_HARV <- st_read("source_data/NEON-DS-Site-Layout-Files/HARV/HARV_roads.shp")
+lines_HARV <- st_read("data/NEON-DS-Site-Layout-Files/HARV/HARV_roads.shp")
 
-point_HARV <- st_read("source_data/NEON-DS-Site-Layout-Files/HARV/HARVtower_UTM18N.shp")
+point_HARV <- st_read("data/NEON-DS-Site-Layout-Files/HARV/HARVtower_UTM18N.shp")
 
 ########################################################
 ## Query Vector Feature Metadata
@@ -233,7 +233,7 @@ ggplot() +
 ########################################################
 
 state_boundary_US <- 
-  st_read("source_data/NEON-DS-Site-Layout-Files/US-Boundary-Layers/US-State-Boundaries-Census-2014.shp")
+  st_read("data/NEON-DS-Site-Layout-Files/US-Boundary-Layers/US-State-Boundaries-Census-2014.shp")
 
 state_boundary_US
 
