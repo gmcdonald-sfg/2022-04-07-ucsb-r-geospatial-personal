@@ -113,6 +113,7 @@ ggplot() +
 stoneWall_HARV <- lines_HARV %>% 
   filter(TYPE == "stone wall")
 
+stoneWall_HARV
 nrow(stoneWall_HARV)
 
 ggplot() +
@@ -168,6 +169,9 @@ ggplot() +
   scale_size_manual(values = line_width) +
   ggtitle("NEON Harvard Forest Field Site", subtitle = "Roads & Trails - Line width varies") + 
   coord_sf()
+
+########################################################
+#### SKIP THIS SECTION
 
 ########################################################
 ## Add Plot Legend

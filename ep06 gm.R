@@ -50,9 +50,14 @@ ggplot() +
 ## Challenge: Import Line and Point Shapefiles
 ########################################################
 
-lines_HARV <- st_read("data/NEON-DS-Site-Layout-Files/HARV/HARV_roads.shp")
+########################################################
+## In the interest of time, lets just do lines_HARV
 
-point_HARV <- st_read("data/NEON-DS-Site-Layout-Files/HARV/HARVtower_UTM18N.shp")
+lines_HARV <- st_read(
+  "data/NEON-DS-Site-Layout-Files/HARV/HARV_roads.shp")
+
+point_HARV <- st_read(
+  "data/NEON-DS-Site-Layout-Files/HARV/HARVtower_UTM18N.shp")
 
 # 1. What type of R spatial object is created when you import each layer?
 class(lines_HARV)
@@ -84,9 +89,9 @@ st_geometry_type(point_HARV)
 
 # 4. How many spatial objects are in each file?
 
-lines_HARV
 nrow(lines_HARV)
+lines_HARV
 
-point_HARV
 nrow(point_HARV)
+point_HARV
 
