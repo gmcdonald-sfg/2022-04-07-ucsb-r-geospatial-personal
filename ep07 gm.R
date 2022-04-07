@@ -58,7 +58,8 @@ names(point_HARV)
 
 lines_HARV$TYPE
 
-unique(lines_HARV$TYPE)
+unique(lines_HARV$TYPE) %>%
+  sort()
 
 ########################################################
 ## Subset Features
@@ -126,7 +127,8 @@ ggplot() +
 ## Customize Plots
 ########################################################
 
-unique(lines_HARV$TYPE)
+unique(lines_HARV$TYPE) %>%
+  sort()
 
 road_colors <- c("blue", "green", "navy", "purple")
 
@@ -160,7 +162,8 @@ ggplot() +
 ## Challenge: Plot Line Width by Attribute
 ########################################################
 
-unique(lines_HARV$TYPE)
+unique(lines_HARV$TYPE) %>%
+  sort()
 
 line_width <- c(1, 3, 2, 6)
 
@@ -216,7 +219,8 @@ ggplot() +
 
 class(lines_HARV$BicyclesHo)
 
-unique(lines_HARV$BicyclesHo)
+unique(lines_HARV$BicyclesHo) %>%
+  sort()
 
 lines_removeNA <- lines_HARV[!is.na(lines_HARV$BicyclesHo),] 
 
@@ -241,12 +245,13 @@ state_boundary_US <-
 
 state_boundary_US
 
-unique(state_boundary_US$region)
+unique(state_boundary_US$region) %>%
+  sort()
 
 colors <- c("purple", "springgreen", "yellow", "brown", "navy")
 
 ggplot() +
-  geom_sf(data = state_boundary_US, aes(color = region), size = 1) +
-  scale_color_manual(values = colors) +
+  geom_sf(data = state_boundary_US, aes(fill = region), size = 1) +
+  scale_fill_manual(values = colors) +
   ggtitle("Contiguous U.S. State Boundaries") + 
   coord_sf()

@@ -31,6 +31,9 @@ ggplot() +
   ggtitle("NEON Harvard Forest Field Site") + 
   coord_sf()
 
+unique(lines_HARV$TYPE) %>%
+  sort()
+
 road_colors <- c("blue", "green", "navy", "purple")
 
 ggplot() + 
@@ -77,7 +80,8 @@ ggplot() +
 
 plot_locations <- st_read("data/NEON-DS-Site-Layout-Files/HARV/PlotLocations_HARV.shp")
 
-unique(plot_locations$soilTypeOr)
+unique(plot_locations$soilTypeOr) %>%
+  sort()
 
 blue_orange <- c("cornflowerblue", "darkorange")
 
