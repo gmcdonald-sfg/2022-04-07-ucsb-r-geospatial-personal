@@ -11,6 +11,8 @@ library(dplyr)
 
 library(ggplot2)
 
+# Change this to match the directory where your data folder lives, 
+# and where your R code script will live
 setwd("~/github/2022-04-07-ucsb-r-geospatial-personal")
 
 aoi_boundary_HARV <- st_read(
