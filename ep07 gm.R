@@ -251,7 +251,13 @@ unique(state_boundary_US$region) %>%
 colors <- c("purple", "springgreen", "yellow", "brown", "navy")
 
 ggplot() +
-  geom_sf(data = state_boundary_US, aes(fill = region), size = 1) +
+  geom_sf(data = state_boundary_US, aes(color = region), size = 1) +
+  scale_color_manual(values = colors) +
+  ggtitle("Contiguous U.S. State Boundaries") + 
+  coord_sf()
+
+ggplot() +
+  geom_sf(data = state_boundary_US, aes(fill = region), size = 0.1) +
   scale_fill_manual(values = colors) +
   ggtitle("Contiguous U.S. State Boundaries") + 
   coord_sf()
