@@ -8,6 +8,9 @@
 ## Import Shapefiles
 ########################################################
 
+# Nice link for what vector data is
+# https://datacarpentry.org/organization-geospatial/02-intro-vector-data/
+
 library(sf)
 library(ggplot2)
 
