@@ -55,8 +55,6 @@ ggplot() +
 ## Challenge: Import Line and Point Shapefiles
 ########################################################
 
-########################################################
-## In the interest of time, lets just do lines_HARV
 
 lines_HARV <- st_read(
   "data/NEON-DS-Site-Layout-Files/HARV/HARV_roads.shp")
