@@ -58,8 +58,7 @@ names(point_HARV)
 
 lines_HARV$TYPE
 
-unique(lines_HARV$TYPE) %>%
-  sort()
+unique(lines_HARV$TYPE)
 
 ########################################################
 ## Subset Features
@@ -127,8 +126,7 @@ ggplot() +
 ## Customize Plots
 ########################################################
 
-unique(lines_HARV$TYPE) %>%
-  sort()
+unique(lines_HARV$TYPE)
 
 road_colors <- c("blue", "green", "navy", "purple")
 
@@ -162,8 +160,7 @@ ggplot() +
 ## Challenge: Plot Line Width by Attribute
 ########################################################
 
-unique(lines_HARV$TYPE) %>%
-  sort()
+unique(lines_HARV$TYPE)
 
 line_width <- c(1, 3, 2, 6)
 
@@ -219,8 +216,7 @@ ggplot() +
 
 class(lines_HARV$BicyclesHo)
 
-unique(lines_HARV$BicyclesHo) %>%
-  sort()
+unique(lines_HARV$BicyclesHo)
 
 lines_removeNA <- lines_HARV[!is.na(lines_HARV$BicyclesHo),] 
 
@@ -245,8 +241,7 @@ state_boundary_US <-
 
 state_boundary_US
 
-unique(state_boundary_US$region) %>%
-  sort()
+unique(state_boundary_US$region)
 
 colors <- c("purple", "springgreen", "yellow", "brown", "navy")
 
