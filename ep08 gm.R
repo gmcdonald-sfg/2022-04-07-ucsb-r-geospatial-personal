@@ -18,9 +18,11 @@ setwd("~/github/2022-04-07-ucsb-r-geospatial-personal")
 aoi_boundary_HARV <- st_read(
   "data/NEON-DS-Site-Layout-Files/HARV/HarClip_UTMZ18.shp")
 
-lines_HARV <- st_read("data/NEON-DS-Site-Layout-Files/HARV/HARV_roads.shp")
+lines_HARV <- st_read(
+  "data/NEON-DS-Site-Layout-Files/HARV/HARV_roads.shp")
 
-point_HARV <- st_read("data/NEON-DS-Site-Layout-Files/HARV/HARVtower_UTM18N.shp")
+point_HARV <- st_read(
+  "data/NEON-DS-Site-Layout-Files/HARV/HARVtower_UTM18N.shp")
 
 ########################################################
 ## Plotting Multiple Shapefiles
@@ -79,7 +81,8 @@ ggplot() +
 # Overlay this layer on top of the lines_HARV layer (the roads). 
 # Create a custom legend that applies line symbols to lines and point symbols to the points.
 
-plot_locations <- st_read("data/NEON-DS-Site-Layout-Files/HARV/PlotLocations_HARV.shp")
+plot_locations <- st_read(
+  "data/NEON-DS-Site-Layout-Files/HARV/PlotLocations_HARV.shp")
 
 unique(plot_locations$soilTypeOr)
 
